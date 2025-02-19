@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VerticalSpinnerMotion : MonoBehaviour
+public class DiagonalSpinnerMotion : MonoBehaviour
 {
   public Rigidbody rb;
   Vector3 angleVelocity;
@@ -11,7 +11,7 @@ public class VerticalSpinnerMotion : MonoBehaviour
     rb = GetComponent<Rigidbody>();
 
     //Set the angular velocity of the Rigidbody (rotating around the X axis, 100 deg/sec)
-    angleVelocity = new Vector3(200, 0, 0);
+    angleVelocity = new Vector3(0, 200, 0);
   }
 
   void FixedUpdate()

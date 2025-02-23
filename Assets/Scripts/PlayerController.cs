@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using Cinemachine.Utility;
 using UnityEngine;
+using UnityEngine.InputSystem.Utilities;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,8 +12,10 @@ public class PlayerController : MonoBehaviour
   private float xRot;
   private bool dashing = false;
   private float dashingTime = 0.1f;
-  private float dashingCooldown = 0.15f;
+  private float dashingCooldown = 1f;
   public Vector3 velocity;
+  private bool isTrapped = false;
+
 
   [SerializeField] private LayerMask FloorMask;
   [SerializeField] private Transform FeetTransform;
@@ -20,7 +24,6 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Animator animator;
   [SerializeField] private float Speed = 5f;
   [SerializeField] private float Sensitivity = 2f;
-  [SerializeField] private float DashForce = 20f;
 
 
   void Start()
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
   private void MovePlayer()
   {
     // forward and backward animations
-    if (PlayerMovementInput != Vector3.zero)
+    if (PlayerMovementInput != Vector3.zero && !isTrapped)
     {
       if (Input.GetKey(KeyCode.W))
       {
@@ -71,8 +74,12 @@ public class PlayerController : MonoBehaviour
       animator.SetFloat("Speed", 0f);
     }
 
+    if (isTrapped)
+    {
+      return;
+    }
     Vector3 moveVector = transform.TransformDirection(PlayerMovementInput) * Speed;
-    PlayerBody.linearVelocity = new Vector3(moveVector.x, PlayerBody.linearVelocity.y, moveVector.z);
+    PlayerBody.linearVelocity = new Vector3(moveVector.x, 0f, moveVector.z);
   }
 
   private void MovePlayerCamera()
@@ -80,7 +87,7 @@ public class PlayerController : MonoBehaviour
     if (Input.GetMouseButton(1))
     {
       xRot -= PlayerMouseInput.y * Sensitivity;
-      xRot = Mathf.Clamp(xRot, -90f, 90f);
+      xRot = Mathf.Clamp(xRot, -75f, 60f);
       transform.Rotate(0f, PlayerMouseInput.x * Sensitivity, 0f);  // Rotate player horizontally
       PlayerCamera.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);  // Rotate camera vertically
     }
@@ -94,5 +101,14 @@ public class PlayerController : MonoBehaviour
     Speed = 5f;
     yield return new WaitForSeconds(dashingCooldown);
     dashing = false;
+  }
+
+  private void OnTriggerEnter(Collider other)
+  {
+    if (other.CompareTag("NormalTrigger"))
+    {
+      isTrapped = true;
+      animator.SetBool("isWalking", false);
+    }
   }
 }

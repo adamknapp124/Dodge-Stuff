@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Cinemachine.Utility;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
 
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     MovePlayer();
     MovePlayerCamera();
+    OnDrawWeapon();
   }
 
   private void MovePlayer()
@@ -90,6 +92,21 @@ public class PlayerController : MonoBehaviour
       xRot = Mathf.Clamp(xRot, -75f, 60f);
       transform.Rotate(0f, PlayerMouseInput.x * Sensitivity, 0f);  // Rotate player horizontally
       PlayerCamera.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);  // Rotate camera vertically
+    }
+  }
+
+  // Check this with debug
+  private void OnDrawWeapon()
+  {
+    GameObject crosshair = new GameObject();
+    if (Input.GetMouseButtonDown(0))
+    {
+      crosshair.AddComponent<CanvasRenderer>();
+      // crosshair.AddComponent<Image>();
+    }
+    else
+    {
+      Destroy(crosshair);
     }
   }
 

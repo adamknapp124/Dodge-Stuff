@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class RaycastTest : MonoBehaviour
 {
-  // Start is called once before the first execution of Update after the MonoBehaviour is created
-  void Start()
-  {
+  [SerializeField] private float maxDistance = 10f;
 
-  }
-
-  // Update is called once per frame
-  void Update()
+  void FixedUpdate()
   {
-    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 10, Color.green, .47f);
+    Ray ray = new(transform.position, transform.forward);
+
+    Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.blue); // Visualize the ray
+
+    if (Physics.Raycast(ray, out RaycastHit hit, maxDistance))
+    {
+      if (hit.collider.CompareTag("TrapSphere"))
+      {
+        Debug.Log("Hit the TrapSphere");
+        Debug.DrawLine(ray.origin, hit.point, Color.red);
+      }
+    }
+    else
+    {
+      Debug.Log("No hit detected.");
+    }
   }
 }

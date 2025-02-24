@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     MovePlayer();
     MovePlayerCamera();
-    OnDrawWeapon();
+    OnFire();
   }
 
   private void MovePlayer()
@@ -95,18 +95,12 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  // Check this with debug
-  private void OnDrawWeapon()
+
+  public void OnFire()
   {
-    GameObject crosshair = new GameObject();
     if (Input.GetMouseButtonDown(0))
     {
-      crosshair.AddComponent<CanvasRenderer>();
-      // crosshair.AddComponent<Image>();
-    }
-    else
-    {
-      Destroy(crosshair);
+      Debug.Log("Firing weapon");
     }
   }
 

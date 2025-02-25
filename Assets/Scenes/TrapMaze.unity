@@ -882,6 +882,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &103067127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2495,6 +2496,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &343072681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3986,6 +3988,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &573756781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4769,6 +4772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 123623342818901013, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 207019979628530767, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.x
       value: 0
@@ -4791,6 +4798,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424547117154216985, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 680636564350774057, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 749830522937842585, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1191253308169959913, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
@@ -4824,6 +4839,10 @@ PrefabInstance:
     - target: {fileID: 1304965148794752026, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.753
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391168662734825760, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1520284582425539114, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.x
@@ -4884,6 +4903,10 @@ PrefabInstance:
     - target: {fileID: 1941451533210218844, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.077703
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076970380575942706, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2294089372941818318, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_LocalScale.x
@@ -4960,6 +4983,26 @@ PrefabInstance:
     - target: {fileID: 2878890918370074200, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361189900877460447, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361189901347071490, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361189902022405281, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361189902596681782, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422126896401330752, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3499998074033607965, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5048,6 +5091,10 @@ PrefabInstance:
     - target: {fileID: 4323390455106269030, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380290134859751239, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4791505536427151529, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.x
@@ -5244,6 +5291,18 @@ PrefabInstance:
     - target: {fileID: 7630258976489116173, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633007422209435056, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707360760956089204, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236934669292252366, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9078470932895760247, guid: 2843ec2ab8fc7154786f9808569844ec, type: 3}
       propertyPath: m_Size.x
@@ -7913,6 +7972,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &1380054706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8503,6 +8563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2913409649660852628, guid: 1b29603872825d0428eb34589bb654d5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4334485090948138753, guid: 1b29603872825d0428eb34589bb654d5, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -8973,6 +9037,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &1559481851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9185,6 +9250,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &1585356388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10566,6 +10632,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!1001 &1761483305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10939,6 +11006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa8d5d6d647cde4db27a629ba8f079a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDistance: 10
+  playerController: {fileID: 0}
 --- !u!1001 &1799751473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12699,6 +12768,7 @@ MonoBehaviour:
   sphereHeight: 1
   totalSpheres: 10
   radius: 1
+  rotationSpeed: 0
 --- !u!65 &2132523205
 BoxCollider:
   m_ObjectHideFlags: 0
